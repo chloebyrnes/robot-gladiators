@@ -1,6 +1,3 @@
-// Players money
-var playerMoney = 10;
-
 // Data on robot
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
@@ -71,3 +68,6 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
 // execute function
 fight();
+
+// Players money
+var playerMoney = 10;
