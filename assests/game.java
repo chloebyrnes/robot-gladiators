@@ -31,7 +31,13 @@ for(var i = 0; i < enemyNames.length; i++) {
 
 // Fight data
 var fight = function(enemyName) {
- // fight funtion statments
+  // repeat and execute as long as the enemy-robot is alive 
+  while(enemyHealth > 0) {
+    // execute function
+for(var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
+  }
 
   // Alert players that they are starting the round
   window.alert("Welcome to Robot Gladiators!");
@@ -52,6 +58,8 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
   } else {
     window.alert(enemyName + " still has " + enemyHealth + " health left.");
   }
+// if the enemy-robot has health points, continue to fight
+  if (enemyHealth > 0) 
 
   // remove player's health by subtracting the amount set in the enemyAttack variable
   playerHealth = playerHealth - enemyAttack;
@@ -85,7 +93,3 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 
 };
 
-// execute function
-for(var i = 0; i < enemyNames.length; i++) {
-  fight(enemyNames[i]);
-}
