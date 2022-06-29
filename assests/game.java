@@ -1,4 +1,7 @@
 // Game States
+  // Alert players that they are starting the round
+  window.alert("Welcome to Robot Gladiators!");
+
 // "WIN" - Player robot has defeated all enemy-robots
 //    * Fight all enemy-robots
 //    * Defeat each enemy-robot
@@ -33,16 +36,7 @@ for(var i = 0; i < enemyNames.length; i++) {
 var fight = function(enemyName) {
   // repeat and execute as long as the enemy-robot is alive 
   while(enemyHealth > 0) {
-    // execute function
-for(var i = 0; i < enemyNames.length; i++) {
-  fight(enemyNames[i]);
-}
-  }
-
-  // Alert players that they are starting the round
-  window.alert("Welcome to Robot Gladiators!");
-
-  var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
+    var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
 // if player choses to fight, then fight
 if (promptFight === "fight" || promptFight === "FIGHT") {
@@ -92,4 +86,11 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 }
 
 };
+  }
 
+  
+
+  // execute function
+  for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+  }
